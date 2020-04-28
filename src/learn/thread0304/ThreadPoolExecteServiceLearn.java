@@ -4,6 +4,9 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 /**
  * 线程池学习  executorservice
  * @author liuhao
@@ -11,6 +14,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadPoolExecteServiceLearn {
 public static void main(String[] args) throws InterruptedException {
+	ReentrantLock reentrantLock = new ReentrantLock();
+	reentrantLock.lock();
+	reentrantLock.unlock();
+	ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
 	ExecutorService executorService = Executors.newFixedThreadPool(5);//定义一个线程池
 	for(int i = 0 ; i < 6; i ++) {
 		executorService.execute(()->{

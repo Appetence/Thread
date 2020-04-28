@@ -28,7 +28,7 @@ public class Concurrentlist {
 	  long start = System.currentTimeMillis();
 		for(int i =0 ; i < thread.length;i++) {
 			thread[i] = new Thread(()->{
-					vector.add("s:"+random.nextInt(1000));
+				copyOnWriteArrayList.add("s:"+random.nextInt(1000));
 			});
 		}
 		Arrays.asList(thread).forEach(r->r.start());//启动
