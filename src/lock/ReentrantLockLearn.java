@@ -23,7 +23,7 @@ public class ReentrantLockLearn {
 
 }
 class MyLock{
-    ReentrantLock reentrantLock = new ReentrantLock();
+   volatile  ReentrantLock reentrantLock = new ReentrantLock();
     public void get01(){
         reentrantLock.lock();
         System.out.println(Thread.currentThread().getId()+"走了1");
