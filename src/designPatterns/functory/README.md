@@ -1,0 +1,2 @@
+interface 产品族方便
+abstract 单一产品合适

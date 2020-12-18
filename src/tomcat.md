@@ -1,0 +1,2 @@
+acceptCount=100
+maxThreads=150

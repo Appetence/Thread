@@ -9,4 +9,8 @@ compareAndSwape(当前对象内存偏移量的值与当前值是否相同)
   ABA问题
         不影响结果的情况下无需处理
         影响结果的时候可用采用AtomicStampedReference进行处理，通过版本号进行控制
+                int k = 0;
+                AtomicStampedReference<Integer> atomicStampedReference = new AtomicStampedReference<Integer>(k,1);
+                Boolean boo = atomicStampedReference.compareAndSet(0,2,1,2);
+                System.out.println(boo+":"+k);
 

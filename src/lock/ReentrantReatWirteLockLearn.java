@@ -44,6 +44,9 @@ class  MyCache{
     private ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
     //put
     public void put(String key ,Object value) {
+        //mq 异步入库，放到磁盘，入库
+            //定时任务：定时线程发送，放到sender
+            //非定时：直接放到mq，task 统一处理
         try {
             reentrantReadWriteLock.writeLock().lock();//锁定
             System.out.println(Thread.currentThread().getName() + "正在写入");

@@ -1,9 +1,8 @@
 package learn.thread0304;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.HashMap;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -13,9 +12,13 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  *
  */
 public class ThreadPoolExecteServiceLearn {
-public static void main(String[] args) throws InterruptedException {
+	volatile ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
+
+	public static void main(String[] args) throws InterruptedException {
+
 	ReentrantLock reentrantLock = new ReentrantLock();
 	reentrantLock.lock();
+	reentrantLock.tryLock();
 	reentrantLock.unlock();
 	ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
 	ExecutorService executorService = Executors.newFixedThreadPool(5);//定义一个线程池

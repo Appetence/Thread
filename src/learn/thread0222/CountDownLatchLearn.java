@@ -7,6 +7,9 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
+/**
+ * 门栓，  秦扫六合
+ */
 public class CountDownLatchLearn {
     private final static int USER_MAX = 10000;
 

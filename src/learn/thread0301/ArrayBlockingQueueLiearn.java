@@ -9,10 +9,11 @@ public class ArrayBlockingQueueLiearn {
 static BlockingQueue<String> queue = new ArrayBlockingQueue<String>(10);
 
 public static void main(String[] args) throws InterruptedException {
-	
+
 	for(int i = 0 ; i < 10 ; i ++) {
 		try {
 			queue.put(i+"2");
+			System.out.println("队列节点："+queue.element());
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
