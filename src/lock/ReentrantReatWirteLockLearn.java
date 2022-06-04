@@ -1,6 +1,6 @@
 package lock;
 
-import learn.thread0304.ThreadPoolCachLearn;
+import thread.thread0304.ThreadPoolCachLearn;
 
 import java.util.HashMap;
 import java.util.Map;

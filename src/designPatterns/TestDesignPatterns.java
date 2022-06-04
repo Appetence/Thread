@@ -61,12 +61,13 @@ public class TestDesignPatterns {
      }
      */
     public static void main(String[] args) {
-        /*ActionStrategyService actionStrategyService = new ActionStrategyService();
+        ActionStrategyService actionStrategyService = new ActionStrategyService();
         BookStrategyService bookStrategyService = new BookStrategyService();
         FileStrategyService fileStrategyService = new FileStrategyService();
         StrategyContext actionStrategyContext = new StrategyContext(actionStrategyService);
         StrategyContext bookStrategyContext = new StrategyContext(bookStrategyService);
-        StrategyContext fileStrategyContext = new StrategyContext(fileStrategyService);*/
+        StrategyContext fileStrategyContext = new StrategyContext(fileStrategyService);
+        //工厂模式
         AbstractFunctory abstractFunctory = FunctoryPattern.getAbstractFunctory();
         abstractFunctory.createHandle();
     }

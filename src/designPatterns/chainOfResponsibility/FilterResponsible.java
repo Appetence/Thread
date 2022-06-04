@@ -84,7 +84,7 @@ class ReadFilter extends Filter {
     @Override
     public boolean doFilter(Request request, Response response, FilterChain filterChina) {
         System.out.println(" run read filter");
-        return false;
+        return true;
     }
 };
 
@@ -94,6 +94,6 @@ class WriteFilter extends Filter {
     public boolean doFilter(Request request, Response response, FilterChain filterChina) {
         System.out.println(" run write filter");
 
-        return true;
+        return false;
     }
 };

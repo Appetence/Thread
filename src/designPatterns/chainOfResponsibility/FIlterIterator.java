@@ -9,7 +9,7 @@ package designPatterns.chainOfResponsibility;
 public class FIlterIterator {
     public static void main(String[] args) {
         Filters filters = buildChinal();
-        filters.doFilter(new Request().setParams("runs"), new Response());
+        filters.doFilter(new Request().setParams("run"), new Response());
 
 
     }

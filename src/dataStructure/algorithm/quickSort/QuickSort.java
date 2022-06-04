@@ -1,5 +1,7 @@
 package dataStructure.algorithm.quickSort;
 
+import java.util.Arrays;
+
 /**
  * @program: ThreadLearn
  * @description: 快速排序 冒泡排序的优化，选择一个基准，将所有比基准小的元素放到前边，比基准大的元素放到基准后边，两边依次分别进行排序
@@ -30,9 +32,7 @@ public class QuickSort {
                 arr[indexRigt] = result;
             }
         }
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        Arrays.stream(arr).forEach(System.out::println);
     }
 
     private static void swap(int[] arr, int indexLeft, int indexRigt) {

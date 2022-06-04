@@ -1,5 +1,7 @@
 package designPatterns.adapterPattern;
 
+import designPatterns.adapterPattern.adapter.client.AdapterClient;
+
 /**
  * @program: ThreadLearn
  * @description:
