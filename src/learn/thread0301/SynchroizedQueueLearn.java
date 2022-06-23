@@ -7,21 +7,37 @@ package learn.thread0301;
  *
  */
 
+import java.io.IOException;
 import java.util.concurrent.SynchronousQueue;
 
 public class SynchroizedQueueLearn {
 	static SynchronousQueue<String> sq = new SynchronousQueue<String>();
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		new Thread(()-> {
 			try {
-				sq.take();
-			} catch (InterruptedException e) {
+				Thread.sleep(1000);
+				// 队列头部拿元素拿不到，返回null
+				String peek = sq.peek();
+				System.out.println("peek "+ peek);
+				// 队列头部拿元素，拿不到 异常
+				String element = sq.element();
+				System.out.println("element "+element);
+				// blockqueue 获取首元素并移除 获取不到会阻塞  如果获取到的参数为空则抛出异常
+//				sq.take();
+				System.out.println(">>>  1");
+				// 获取首元素并移除 获取不到则返回null
+				String poll = sq.poll();
+				System.out.println(">>>  2"+poll);
+//			} catch (InterruptedException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				System.out.println("error >>>");
 			}
 		}).start();
-		//sq.add("111"); //Exception in thread "main" java.lang.IllegalStateException: Queue full
+//		sq.add("111"); //Exception in thread "main" java.lang.IllegalStateException: Queue full
 		sq.put("123");//底层实现用的transfer，是一种特殊的transferqueue，里边的内容必须直接给customer消费否则会阻塞
 		System.out.println("jie  shu  le "+sq.size());
+		System.in.read();
 	}
 }
