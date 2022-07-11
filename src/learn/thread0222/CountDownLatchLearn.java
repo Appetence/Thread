@@ -1,14 +1,10 @@
 package learn.thread0222;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
-import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicStampedReference;
 
 public class CountDownLatchLearn {
-    private final static int USER_MAX = 10000;
+    private final static int USER_MAX = 5;
 
     public static void main(String[] args) {
 
