@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * @program: Thread
- * @description:
+ * @description: 相邻必不相等，求最小值
  * @author: liuhao
  * @date: 2022-06-23 19:49
  */
@@ -76,7 +76,7 @@ public class BinarySearchLearn1 {
         int L = 0;
         int R = arr.length - 1;
 
-        while (L < R - 1) {
+        while (L < R - 1) { // 避免后续运算减到最后只剩一个元素的情况
             int ans = (L + R) / 2;
             if (arr[ans - 1] < arr[ans] && arr[ans] < arr[ans + 1]) {
                 return ans;
@@ -90,7 +90,7 @@ public class BinarySearchLearn1 {
                 R = ans - 1;
             }
         }
-        // 小于 取左边 否则取右边
+        // 遍历到最后，L = R -1 仅余下两个相邻元素，小于 取左边 否则取右边
         return arr[L] < arr[R] ? L : R;
 
 

@@ -52,8 +52,9 @@ public class DelayQueueLearn {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		long now = System.currentTimeMillis();
-		MyTask mt = new MyTask(now + 1000);
+//		long now = System.currentTimeMillis();
+		long now = 10000 + System.currentTimeMillis();
+/*		MyTask mt = new MyTask(now + 1000);
 		System.out.println(now + 1000);
 		MyTask mt1 = new MyTask(now + 2000);
 		System.out.println(now + 2000);
@@ -71,7 +72,17 @@ public class DelayQueueLearn {
 		query.put(mt3);
 		query.put(mt4);
 		query.put(mt5);
-		System.out.println(query);
+		System.out.println(query);*/
+
+		// test
+
+		query.put( new MyTask(now + 1000));
+		query.put( new MyTask(now + 1000));
+		query.put( new MyTask(now + 1000));
+		query.put( new MyTask(now + 1000));
+		query.put( new MyTask(now + 1000));
+		query.put( new MyTask(now + 2000));
+		query.put( new MyTask(now + 1500));
 		/*
 		 * for(MyTask m : query) { System.out.println(query.take());//take通过索引取出元素 }
 		 */

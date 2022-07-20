@@ -33,7 +33,7 @@ public class CacheThreadPoolLearn {
 //        executorService.submit(() -> {
         executorService.execute(() -> {
             try {
-                Thread.sleep(1);
+                Thread.sleep(100000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

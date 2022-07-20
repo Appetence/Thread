@@ -31,7 +31,7 @@ public static void main(String[] args) {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	}, 0, 1, TimeUnit.SECONDS);//前一个线程结束多久之后执行
+	}, 10, 10, TimeUnit.SECONDS);//前一个线程结束多久之后执行
 	
 }
 }
