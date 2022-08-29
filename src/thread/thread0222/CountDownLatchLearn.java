@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 门栓，  秦扫六合
  */
 public class CountDownLatchLearn {
-    private final static int USER_MAX = 10000;
+    private final static int USER_MAX = 5;
 
     public static void main(String[] args) {
 

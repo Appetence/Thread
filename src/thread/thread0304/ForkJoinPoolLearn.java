@@ -93,8 +93,16 @@ public class ForkJoinPoolLearn {
 
     public static void main(String[] args) throws IOException {
         ForkJoinPool forkJoinPool = new ForkJoinPool();
+        forkJoinPool.submit(()->{
+            System.out.println("》》》");
+                });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         AddTask task = new AddTask(0, nums.length);
-        forkJoinPool.execute(task);
+        forkJoinPool.submit(task);
         long result = task.join();
         System.out.println(result);
         System.in.read();
