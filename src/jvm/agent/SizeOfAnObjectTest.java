@@ -1,6 +1,6 @@
 package jvm.agent;
 
-import com.xiamu.agent.ObjectShallowSizeAgent;
+//import com.xiamu.agent.ObjectShallowSizeAgent;
 
 /**
  * @program: ThreadLearn
@@ -14,10 +14,10 @@ public class SizeOfAnObjectTest {
      * @param args
      */
     public static void main(String[] args) {
-        ObjectShallowSizeAgent.sizeOf(new AgentUtil_1());//
+       /* ObjectShallowSizeAgent.sizeOf(new AgentUtil_1());//
         ObjectShallowSizeAgent.sizeOf(new Object());//16   8 classHeader +4 classPointers(64为默认8，useCompressedOops 开启后压缩为4) +4（padding）
         ObjectShallowSizeAgent.sizeOf(new  int [] {});//16  8 classHeader +4 classPointers(64为默认8，useCompressedOops 开启后压缩为4) + 4（arrayLength）
-
+*/
         /**
          * long  4
          * String   4       #useCompressesClassPointesr 64bitVM 默认为8 开启后为4

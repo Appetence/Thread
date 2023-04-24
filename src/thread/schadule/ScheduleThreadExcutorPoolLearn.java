@@ -34,11 +34,11 @@ public class ScheduleThreadExcutorPoolLearn {
 
     private static void run() {
         System.out.println("open");
-        /*try {
+        try {
             Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
         System.out.println(">>>");
         System.out.println("end");
     }

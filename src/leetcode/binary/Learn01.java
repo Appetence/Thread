@@ -1,5 +1,7 @@
 package leetcode.binary;
 
+import leetcode.util.BaseUtil;
+
 /**
  * @program: ThreadLearn
  * @description:
@@ -13,22 +15,39 @@ public class Learn01 {
      * 2 有序数组 >= 某个数最左侧的位置
      * 3 有序数组 <= 某个数最右侧的位置
      * 4 相邻不相等，局部最小值问题
+     *
      * @param args
      */
     public static void main(String[] args) {
-        findOwne(){
-            
-        }
+        findOwne(1);
     }
 
-    private static void findOwne() {
-        git remote set-url origin https://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@github.com/Appetence/Thread.git
-         https://<your_token>@github.com/<USERNAME>/<REPO>.git
-         Updates were rejected because the remote contains work that you do
-         not have locally. This is usually caused by another repository pushing
-         to the same ref. You may want to first integrate the remote changes
-         (e.g., 'git pull ...') before pushing again.
-         See the 'Note about fast-forwards' in 'git push --help' for details.
+    private static boolean findOwne(int num) {
+        /**
+         * 二分查找
+         *
+         */
+        // 有序数组
+        int[] arr = BaseUtil.ORDER_ARRAY;
+        // 先判断边界  null    长度为0             只有一个数 且不相等
+        if (arr == null || arr.length == 0/* || (arr.length == 1 && arr[0] != num)*/) {
+            return false;
+        }
+        // 长度大于等于1 单独判断长度为1 的情况
+        int length = arr.length;
+        int left = 0 ;
+        while (length > 1){
+
+
+        }
+
+        // 兼容仅有一个的情况
+
+
+
+
+        // 对数器
+        return false;
 
     }
 }

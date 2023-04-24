@@ -3,6 +3,7 @@ package lock;
 import com.sun.tools.doclint.Entity;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 import static com.sun.tools.doclint.Entity.ge;
@@ -37,7 +38,8 @@ class TT implements Runnable{
     }
 }
 class MyLock{
-   volatile  ReentrantLock reentrantLock = new ReentrantLock(); //默认非公平锁 只有new ReentrantLock(true);时候才算是公平锁
+   private  static volatile  ReentrantLock reentrantLock = new ReentrantLock(); //默认非公平锁 只有new ReentrantLock(true);时候才算是公平锁
+
     public void get01(){
         reentrantLock.lock();
         System.out.println(Thread.currentThread().getId()+"走了1");

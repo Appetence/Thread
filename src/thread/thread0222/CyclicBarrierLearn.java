@@ -11,11 +11,11 @@ import java.util.concurrent.CyclicBarrier;
  */
 public class CyclicBarrierLearn {
     public static void main(String[] args) {
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(7, () -> {
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(2, () -> {
             //达到要求后执行 countdownlatch + thread + while
             System.out.println("***********结束啦");
         });
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 3; i++) {
             int template = i;
             new Thread(() -> {
                 try {

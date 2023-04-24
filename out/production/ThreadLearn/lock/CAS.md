@@ -14,3 +14,9 @@ compareAndSwape(当前对象内存偏移量的值与当前值是否相同)
                 Boolean boo = atomicStampedReference.compareAndSet(0,2,1,2);
                 System.out.println(boo+":"+k);
 
+ 
+
+# 线程锁： 
+    独占模式
+
+    共享模式

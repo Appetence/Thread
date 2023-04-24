@@ -14,5 +14,6 @@ public class ThreadPoolExecutorLean {
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         executorService.execute(() -> {
         });
+        executorService.shutdown();
     }
 }
